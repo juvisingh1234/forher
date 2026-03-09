@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title of the page shown in the browser -->
+    <title>Responsive Gallery</title>
+    <!--links the css to the html-->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- centers the title of the page and what the photos are about -->
+    <center>
+        <h1 id = 'title'>My Pretty Girl</h1>
+    </center>
+    <!--creates the grid for where the images are going to be. This is what is shown to the user-->
+    <div class="container" id = 'container'>
+      <!--when the image is clicked, it runs a function to create a slideshow type aesthetic-->
+        <div class="getSmaller"><img class='getSmaller' id = 'img1' src="./IMG_3350.JPG" style="width:-webkit-fill-available; height:-webkit-fill-available;" onclick="currentPicture(1)" ></div>
+        <div class="getSmaller"><img class='getSmaller' id = 'img2' src="./IMG_2790.JPG" style="width:-webkit-fill-available; height:-webkit-fill-available;" onclick="currentPicture(2)"></div>
+        <div class="getSmaller"><img class='getSmaller' id = 'img3' src="./IMG_0092.JPG" style="width:-webkit-fill-available; height:-webkit-fill-available;" onclick="currentPicture(3)"></div>
+        <div class="getSmaller"><img class='getSmaller' id = 'img4' src="./IMG_0195 2.JPG" style="width:-webkit-fill-available; height:-webkit-fill-available;" onclick="currentPicture(4)"></div>
+        <div class="getSmaller"><img class='getSmaller' id = 'img5' src="./IMG_7486.JPG" style="width:-webkit-fill-available; height:-webkit-fill-available;" onclick="currentPicture(5)"></div>
+        <div class="getSmaller"><img class='getSmaller' id = 'img6' src="./IMG_3059.jpg" style="width:-webkit-fill-available; height:-webkit-fill-available;" onclick="currentPicture(6)"></div>
+        <div class="getSmaller"><img class='getSmaller' id = 'img7' src="./IMG_7619.JPG" style="width:-webkit-fill-available; height:-webkit-fill-available;" onclick="currentPicture(7)"></div>
+        <div class="getSmaller"><img class='getSmaller' id = 'img8' src="./IMG_0078.jpg" style="width:-webkit-fill-available; height:-webkit-fill-available;" onclick="currentPicture(8)"></div>
+    </div>
+    <!--this div holds the hidden content that is not shown until the user clicks on an image-->
+    <div id="slideshow" class="slide">
+      <div class="slides" id="imgg1">
+        <center>
+          <!--the following comments apply to the next images as well, since they are all the same layout-->
+          <!--div containing the image and the arrows so things are aligned properly-->
+          <div style="display: flex; align-items: center; flex-direction:row; justify-content: space-evenly;">
+            <!--the p tags are the arrows to move to the next picture or to go to the previous picture. When it is clicked, the JS function runs to preform this.-->
+            <p class="backwards" onclick="moveSlide(-1)">&#10094;</p>
+            <img id = "imggg1" src="./DSC_0039.JPG"style="width: 70%; margin-bottom: 20px;">
+            <p class="forward" onclick="moveSlide(1)">&#10095;</p>
+          </div>
+            <div>
+              <!--this is the close button, which runs the JS function closeSlideShow() when clicked-->
+              <button id="close" onclick="closeSlideshow()">Close</button>
+            </div>
+        </center>
+      </div>
+      <div class="slides" id="imgg2">
+        <center>
+          <div style="display: flex; align-items: center; flex-direction:row; justify-content: space-evenly;">
+            <p style="display:inline;" class="backwards" onclick="moveSlide(-1)">&#10094;</p>
+            <img id = "imggg2" src="./DSC_0044.JPG" style="width:70%; margin-bottom: 20px;">
+            <p style="display:inline;" class="forward" onclick="moveSlide(1)">&#10095;</p>
+          </div>
+          <div>
+            <button id="close" onclick="closeSlideshow()">Close</button>
+          </div>
+        </center>
+      </div>
+      <div class="slides" id="imgg3">
+        <center>
+          <div style="display: flex; align-items: center; flex-direction:row; justify-content: space-evenly;">
+            <p style="display:inline;" class="backwards" onclick="moveSlide(-1)">&#10094;</p>
+            <img id = "imggg3" src="./DSC_0062.JPG" style="width:70%; margin-bottom: 20px;">
+            <p style="display:inline;" class="forward" onclick="moveSlide(1)">&#10095;</p>
+          </div>
+          <div>
+            <button id="close" onclick="closeSlideshow()">Close</button>
+          </div>
+        </center>
+      </div>
+      <div class="slides" id="imgg4">
+        <center>
+          <div style="display: flex; align-items: center; flex-direction:row; justify-content: space-evenly;">
+            <p style="display:inline;" class="backwards" onclick="moveSlide(-1)">&#10094;</p>
+            <img id = "imggg4" src="./DSC_0063.JPG" style="width:70%; margin-bottom: 20px;">
+            <p style="display:inline;" class="forward" onclick="moveSlide(1)">&#10095;</p>
+          </div>
+          <div>
+            <button id="close" onclick="closeSlideshow()">Close</button>
+          </div>
+        </center>
+      </div>
+      <div class="slides" id="imgg5">
+        <center>
+          <div style="display: flex; align-items: center; flex-direction:row; justify-content: space-evenly;">
+            <p style="display:inline;" class="backwards" onclick="moveSlide(-1)">&#10094;</p>
+            <img id = "imggg5" src="./DSC_0071.JPG" style="width:70%; margin-bottom: 20px;">
+            <p style="display:inline;" class="forward" onclick="moveSlide(1)">&#10095;</p>
+          </div>
+          <div>
+            <button id="close" onclick="closeSlideshow()">Close</button>
+          </div>
+        </center>
+      </div>
+      <div class="slides" id="imgg6">
+        <center>
+          <div style="display: flex; align-items: center; flex-direction:row; justify-content: space-evenly;">
+            <p style="display:inline;" class="backwards" onclick="moveSlide(-1)">&#10094;</p>
+            <img id = "imggg6" src="./DSC_0077.JPG" style="width:70%; margin-bottom: 20px;">
+            <p style="display:inline;" class="forward" onclick="moveSlide(1)">&#10095;</p>
+          </div>
+          <div>
+            <button id="close" onclick="closeSlideshow()">Close</button>
+          </div>
+        </center>
+      </div>
+      <div class="slides" id="imgg7">
+        <center>
+          <div style="display: flex; align-items: center; flex-direction:row; justify-content: space-evenly;">
+            <p style="display:inline;" class="backwards" onclick="moveSlide(-1)">&#10094;</p>
+            <img id = "imggg7" src="./DSC_0083.JPG" style="width:70%; margin-bottom: 20px;">
+            <p style="display:inline;" class="forward" onclick="moveSlide(1)">&#10095;</p>
+          </div>
+          <div>
+            <button id="close" onclick="closeSlideshow()">Close</button>
+          </div>
+        </center>
+      </div>
+      <div class="slides" id="imgg8">
+        <center>
+          <div style="display: flex; align-items: center; flex-direction:row; justify-content: space-evenly;">
+            <p style="display:inline;" class="backwards" onclick="moveSlide(-1)">&#10094;</p>
+            <img id = "imggg8" src="./DSC_0085.JPG" style="width:70%; margin-bottom: 20px;">
+            <p style="display:inline;" class="forward" onclick="moveSlide(1)">&#10095;</p>
+          </div>
+          <div>
+            <button id="close" onclick="closeSlideshow()">Close</button>
+          </div>
+        </center>
+      </div>
+    </div>
+    <!--imports the JS to run the functions placed in the onclick functions.-->
+    <script src="app.js"></script>
+</body>
+</html>

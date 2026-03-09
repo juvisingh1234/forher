@@ -1,0 +1,115 @@
+/* sets the backgroung image as well as the SVG for it */
+html {
+    background-color: #1E1D1A;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='7.7' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+/*formats the title of the page */
+#title {
+    font-size: 65px;
+    color:#ff6666;
+    font-family: myFont;
+}
+/* creates a font that is used for the title */
+@font-face {
+    font-family: myFont;
+    src: url(./waltograph42.otf);
+}
+/* creates a responsive affect to the images depending on the screen size */
+@media (max-width: 479px) {
+    img {
+        width: 70%;
+    }
+}
+/* the grid to place the images in a nice manner */
+.container {
+    display: grid;
+    grid-template-columns: [first] 50% [second] 50% [end];
+    grid-template-rows: [f] auto [s] auto [t] auto [fo] auto [end];
+    padding-right: 25px;
+    padding-left:25px;
+    gap: 15px;
+}
+/* the following are the placing of the images in the grid */
+#img1{
+    grid-column: first/second;
+    grid-row: f/s;
+    border-radius: 30px;
+}
+#img2{
+    grid-column: second/end;
+    grid-row: f/s;
+    border-radius: 30px;
+}
+#img3{
+    grid-column: first/second;
+    grid-row: s/t;
+    border-radius: 30px;
+}
+#img4{
+    grid-column: second/end;
+    grid-row: s/t;
+    border-radius: 30px;
+}
+#img5{
+    grid-column: first/second;
+    grid-row: t/fo;
+    border-radius: 30px;
+}
+#img6{
+    grid-column: second/end;
+    grid-row: t/fo;
+    border-radius: 30px;
+}
+#img7{
+    grid-column: first/second;
+    grid-row: fo/end;
+    border-radius: 30px;
+}
+#img8{
+    grid-column: second/end;
+    grid-row: fo/end;
+    border-radius: 30px;
+}
+/* transitions for the image to get smaller when the image is hovered. got it from 'https://thebrandsmen.com/css-image-hover-effects/' */
+.getSmaller img {
+    transition: 1s ease;
+}
+
+.getSmaller img:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 1s ease;
+}
+/* sets the slideshow to invisible until it is needed to be shown */
+#slides {
+    display: none;
+}
+#slideshow {
+    display:none;
+}
+.slide {
+    display: none;
+}
+/* this is the close button. puts the text in the middle and the radius makes it round */
+#close {
+    background-color: #ff6666;
+    border: none;
+    color: white;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* these are the forward and back buttons. Added the cursor so it shows it is clickable when it is hovered over */
+.forward {
+    font-size: 4.5vw;
+    color:#ff6666;
+    cursor: pointer;
+
+}
+.backwards {
+    font-size: 4.5vw;
+    color:#ff6666;
+    cursor: pointer;
+}
